@@ -38,3 +38,5 @@ target 'starter' do
     )
   end
 end
+project 'path/to/Project.xcodeproj'
+project './starter.xcodeproj'
