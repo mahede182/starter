@@ -7,13 +7,18 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 //defined
 import { RootStack } from './src/navigation/RootStack';
+import { Provider } from 'react-redux';
+import { store } from './src/store/store';
+
 function App(): React.JSX.Element {
 
   return (
     <SafeAreaView style={styles.container}>
-      <NavigationContainer>
-        <RootStack />
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <RootStack />
+        </NavigationContainer>
+      </Provider>
     </SafeAreaView>
   );
 }
